@@ -1,0 +1,145 @@
+@media (max-width: 767px) {
+    .header .soc-list {
+        display: none;
+    }
+    .header-text {
+        font-size: 14px;
+        line-height: 1.3;
+    }
+    .header-line2 {
+        padding-bottom: 10px;
+    }
+    .seach-form {
+        margin-bottom: 15px;
+    }
+    .search-form-wrap .btn-def {
+        height: 35px;
+    }
+    .reg-wrap {
+        padding: 40px 40px;
+    }
+    .person .name {
+        font-size: 16px;
+    }
+    .list-rev .text {
+        margin-top: 15px;
+        padding-left: 49px;
+    }
+    .more-info .text-wrap:before {
+        left: 36px;
+        top: 12px;
+    }
+    .user-p {
+        display: block;
+    }
+    .wrap-btn {
+        text-align: center;
+        margin-top: 21px;
+    }
+}
+
+@media (max-width: 576px) {
+    .logo img {
+        width: 170px;
+    }
+    .logo .t {
+        font-size: 9px;
+        letter-spacing: .6px;
+    }
+    .header-line {
+        flex-wrap: wrap;
+    }
+    .mob-btn {
+        order: 1;
+        width: 100%;
+        justify-content: center;
+        padding-top: 46px;
+        font-size: 25px;
+        .burger {
+            width: 25px;
+            span {
+                height: 3px;
+            }
+        }
+    }
+    .header-line {
+        margin-bottom: 22px;
+    }
+    .seach-form input {
+        font-size: 12px;
+    }
+    .f-nav {
+        display: none;
+    }
+    .header-text {
+        br {
+            display: none;
+        }
+    }
+    .reg-wrap .reg-nav a {
+        font-size: 18px;
+    }
+    .reg-wrap .reg-nav {
+        width: 100%;
+    }
+    .list-rev .text {
+        padding-left: 25px;
+    }
+    .no-res{
+        background-size: 260px;
+    }
+}
+
+@media (max-width: 400px) {
+    .copy {
+        font-size: 12px;
+    }
+    .header .reg-links {
+        display: none;
+    }
+    .header-line {
+        justify-content: center;
+    }
+    .header {
+        padding-top: 20px;
+    }
+    .seach-form {
+        display: block;
+        .wrap-input {
+            width: 100%;
+            margin-bottom: 15px;
+        }
+    }
+    .seach-form input {
+        font-size: 11px;
+    }
+    .seach-form button {
+        height: 35px;
+        width: 100%;
+    }
+    .logo img {
+        width: 192px;
+    }
+    .logo .t {
+        font-size: 10px;
+        letter-spacing: .8px;
+    }
+    .reg-wrap .reg-nav a {
+        font-size: 16px;
+    }
+    .reg-wrap {
+        margin-right: -17px;
+        margin-left: -17px;
+        padding: 40px 25px;
+    }
+    .no-res .t2{
+        font-size: 24px;
+    }
+    .no-res .t1{
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 374px) {}
+
+@media (max-width: 360px) {}
