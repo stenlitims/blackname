@@ -1010,7 +1010,7 @@ button {
     .red{
         font-size: 14px;
         letter-spacing: 0px;
-        margin-bottom: 6px;
+        margin-bottom: 10px;
         font-weight: bold;
     }
 }
@@ -1096,4 +1096,14 @@ button {
         margin-bottom: 20px;
         color: #535353;
     }
+}
+
+.help-block{
+    line-height: 1.2;
+    font-size: 14px;
+    margin-top: 3px;
+}
+
+.jGrowl-message{
+    font-size: 13px;
 }
