@@ -2,7 +2,15 @@
 
 @media (min-width: 560px) {}
 
-@media (min-width: 768px) {}
+@media (min-width: 768px) {
+    .add-rev{
+        min-width: 600px;
+        form{
+            max-width: 460px;
+            margin: 0 auto 10px;
+        }
+    }
+}
 
 @media (min-width: 991px) {
     .hidden-lg {

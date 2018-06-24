@@ -296,6 +296,7 @@ textarea {
 }
 
 .c-modal {
+    padding: 36px;
     .fancybox-close-small {
         width: 34px;
         height: 34px;
@@ -1106,4 +1107,36 @@ button {
 
 .jGrowl-message{
     font-size: 13px;
+}
+
+.form-profile{
+    max-width: 800px;
+    margin: 0 auto;
+    .btns{
+        display: flex;
+        justify-content: space-around;
+        margin-top: 25px;
+    }
+    .profile-header{
+        margin: 15px 0;
+    }
+    .message{
+        color: red;
+    }
+    .help-block{
+        font-size: 12px;
+        margin: 0;
+        opacity: .6;
+    }
+    .form-group{
+        input[type=text], input[type=password], input[type=email]{
+            margin-bottom: 5px;
+        }
+    }
+}
+
+.add-rev{
+    textarea{
+        min-height: 100px;
+    }
 }

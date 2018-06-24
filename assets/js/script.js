@@ -32,24 +32,7 @@ function loadMap() {
     });
 }
 
-
 if ($('.js-map').length > 0) loadMap();
-
-
-
-function loadFancy() {
-    $('head').append($('<link rel="stylesheet" type="text/css" />').attr('href', 'https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.1.25/jquery.fancybox.min.css'));
-    $.getScript("https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.1.25/jquery.fancybox.min.js", function () {
-        $('.js-btn-modal').fancybox({
-            animationDuration: 350,
-            animationEffect: 'material',
-            beforeShow: function (e) {}
-        });
-
-
-    });
-}
-
 
 
 var g = {
@@ -75,24 +58,6 @@ var os = g.getOs(),
 (function () {
     var form = {
         url: 'ajax',
-        load: function (tpl, id) {
-            var data = {
-                data: tpl,
-                action: 'loadForm'
-            };
-
-            if (id) data.id = id;
-
-            $.ajax({
-                url: this.url,
-                type: "POST",
-                data: data,
-                success: function (data) {
-                    $('#modal-content .modal-body').html(data);
-                    $('#modal-content').modal('show');
-                }
-            });
-        },
         valid: function (par) {
             var valid = true,
                 name = '',
@@ -148,22 +113,12 @@ var os = g.getOs(),
                             location.href = data.url;
                         }
                         $('.alert').remove();
-                        $('.js-in').removeClass('comp');
                     }, time);
                 }
             });
 
         }
     }
-
-
-    if ($('a[data-fancybox]').length > 0) {
-        loadFancy();
-    }
-
-    // copy nav
-    //  $('body').append('<div class="mob-nav"><div class="close-modal hidden-lg"></div><div class="main-nav">' + $('.main-nav').html() + '</div></div>');
-
 
     // mob mav
     $(document).on(eventClick, '.js-open-nav', function () {
