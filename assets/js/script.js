@@ -170,7 +170,9 @@ var os = g.getOs(),
     });
     */
 
-    $('input[name=phone]').mask('+38(000) 000 00 00');
+   $('input[name=phone], .js-mask-phone').mask('+0 000 000 00 009', {
+        clearIfNotMatch: true
+    });
 
 
 
@@ -185,10 +187,14 @@ var os = g.getOs(),
 
     $(document).on(eventClick, '.js-copy-phone', function () {
         // console.log($(this).parent().find('.form-group ').length);
-        if ($(this).parent().find('.form-group ').length == 2) {
+        if ($(this).parent().find('.form-group').length == 2) {
             $(this).hide();
         }
-        $(this).before($(this).prev().clone());
+        $(this).before($('.js-copy-phone').prev().clone());
+        $('.js-copy-phone').prev().find('input').val('').mask('+0 000 000 00 009', {
+            clearIfNotMatch: true
+        });
+        $('.js-copy-phone').prev().find('.star').remove();
     });
 
 
@@ -230,7 +236,7 @@ var os = g.getOs(),
         },
         list: {
             onClickEvent: function (e) {
-               // console.log(options);
+                // console.log(options);
                 setSelect();
             },
             onKeyEnterEvent: function (e) {
@@ -239,14 +245,22 @@ var os = g.getOs(),
         },
         template: {
             type: "custom",
-            method: function(value, item) {
-                return  '<span class="wr-res" data-id="'+ item.id +'">' + value + " | " + item.phone + '</span>';
+            method: function (value, item) {
+                return '<span class="wr-res" data-id="' + item.id + '">' + value + " | " + item.phone + '</span>';
             }
         },
         requestDelay: 400
     };
 
     $('.js-autocomplete').easyAutocomplete(options);
+
+
+    $(document).on('change', '.js-radio-list input', function () {
+        var val = $(this).val();
+        $('.type_res').hide();
+        $('.js-' + val).show();
+
+    });
 
 
 })();

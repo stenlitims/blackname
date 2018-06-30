@@ -225,7 +225,7 @@ a {
     &:hover {
         box-shadow: 0 5px 25px 0 rgba(211, 50, 42, .6);
     }
-    svg{
+    svg {
         display: inline-block;
         fill: #fff;
         width: 14px;
@@ -924,7 +924,7 @@ button {
         &:first-child {
             padding-top: 5px;
         }
-        .date{
+        .date {
             font-size: 11px;
             margin-top: -12px;
             color: #818181;
@@ -940,7 +940,7 @@ button {
         font-size: 15px;
         letter-spacing: 0;
     }
-    .contacts{
+    .contacts {
         margin-bottom: 0;
     }
 }
@@ -949,17 +949,17 @@ button {
     .heading2 {
         margin-bottom: 5px;
     }
-    .item{
+    .item {
         padding: 0;
         border-bottom: none;
     }
-    .text{
+    .text {
         position: relative;
         z-index: 2;
     }
-    .text-wrap{
+    .text-wrap {
         position: relative;
-        &:before{
+        &:before {
             background: url(../images/kavichki.png) no-repeat;
             width: 52px;
             height: 39px;
@@ -970,10 +970,11 @@ button {
         }
     }
 }
-.soc-list-wrap{
+
+.soc-list-wrap {
     margin-bottom: 10px;
     margin-top: 13px;
-    .t{
+    .t {
         text-transform: uppercase;
         font-family: $fontOSC;
         font-size: 10px;
@@ -981,34 +982,34 @@ button {
         letter-spacing: .3px;
         margin-bottom: 4px;
     }
-    .soc-list{
-        a{
-            &:first-child{
+    .soc-list {
+        a {
+            &:first-child {
                 margin-left: 0;
             }
         }
     }
 }
 
-.edit-links{
+.edit-links {
     list-style: none;
     padding: 0;
     margin: 0;
     line-height: 1.4;
-    a{
+    a {
         text-decoration: none;
-        &:hover{
+        &:hover {
             text-decoration: underline;
         }
     }
 }
 
-.red{
+.red {
     color: #d52b1e;
 }
 
-.wrap-btn{
-    .red{
+.wrap-btn {
+    .red {
         font-size: 14px;
         letter-spacing: 0px;
         margin-bottom: 10px;
@@ -1016,50 +1017,49 @@ button {
     }
 }
 
-.name{
-    a{
+.name {
+    a {
         color: $colorBl;
-        &:hover{
+        &:hover {
             text-decoration: underline;
         }
     }
 }
 
-
-.list-res{
+.list-res {
     position: relative;
     background: #FAFAFB;
     font-size: 13px;
     line-height: 1.2;
-    .item{
+    .item {
         display: flex;
         position: relative;
         border-bottom: 1px solid #E6E6E6;
         cursor: pointer;
         transition: all .3s ease;
-        &:hover{
+        &:hover {
             background: #282828;
             border-color: #282828;
             color: #fff;
-            .btn-def{
+            .btn-def {
                 opacity: 1;
                 visibility: visible;
             }
         }
-        > div{
+        >div {
             width: 50%;
             display: flex;
             align-items: center;
         }
-        .col{
+        .col {
             width: 33.33%;
             padding: 15px 10px 15px 20px;
-            a{
+            a {
                 color: $colorLink;
             }
         }
     }
-    .btn-def{
+    .btn-def {
         position: absolute;
         right: 5px;
         top: 5px;
@@ -1071,20 +1071,20 @@ button {
     }
 }
 
-.no-res{
+.no-res {
     background: #F1F2F4 url(../images/no-user.png) no-repeat center center;
     min-height: 450px;
     text-align: center;
     display: flex;
     align-items: center;
     justify-content: center;
-    .t1{
+    .t1 {
         font-size: 18px;
         text-transform: uppercase;
         font-weight: bold;
         margin-bottom: 3px;
     }
-    .t2{
+    .t2 {
         font-size: 30px;
         color: #d52b1e;
         font-weight: bold;
@@ -1092,51 +1092,101 @@ button {
         line-height: 1.2;
         margin-bottom: 5px;
     }
-    .t3{
+    .t3 {
         font-size: 13px;
         margin-bottom: 20px;
         color: #535353;
     }
 }
 
-.help-block{
+.help-block {
     line-height: 1.2;
     font-size: 14px;
     margin-top: 3px;
 }
 
-.jGrowl-message{
+.jGrowl-message {
     font-size: 13px;
 }
 
-.form-profile{
+.form-profile {
     max-width: 800px;
     margin: 0 auto;
-    .btns{
+    .btns {
         display: flex;
         justify-content: space-around;
         margin-top: 25px;
     }
-    .profile-header{
+    .profile-header {
         margin: 15px 0;
     }
-    .message{
+    .message {
         color: red;
     }
-    .help-block{
+    .help-block {
         font-size: 12px;
         margin: 0;
         opacity: .6;
     }
-    .form-group{
-        input[type=text], input[type=password], input[type=email]{
+    .form-group {
+        input[type=text],
+        input[type=password],
+        input[type=email] {
             margin-bottom: 5px;
         }
     }
 }
 
-.add-rev{
-    textarea{
+.add-rev {
+    textarea {
         min-height: 100px;
+    }
+}
+
+.radio-list {
+    >label {
+        display: inline-block;
+        position: relative;
+        cursor: pointer;
+        margin: 0 15px;
+        &:last-child {
+            margin-right: 0;
+        }
+        &:first-child {
+            margin-left: 0;
+        }
+    }
+    input {
+        opacity: 0;
+        position: absolute;
+        &+span {
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            display: inline-block; //   background: #1C6E97;
+            border: 2px solid #1C6E97;
+            vertical-align: middle;
+            margin-right: 5px;
+            position: relative;
+            top: -1px;
+            &:before {
+                content: "";
+                position: absolute;
+                width: 6px;
+                height: 6px;
+                background: #1C6E97;
+                border-radius: 50%;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                opacity: 0;
+                transition: all .3s ease;
+            }
+        }
+        &:checked+span {
+            &:before {
+                opacity: 1;
+            }
+        }
     }
 }
