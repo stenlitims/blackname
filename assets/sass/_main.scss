@@ -156,7 +156,7 @@ a {
     background: rgba(0, 0, 0, .6);
 }
 
-.loder {
+.loader {
     position: relative;
     &:after {
         content: "";
@@ -950,8 +950,8 @@ button {
         margin-bottom: 5px;
     }
     .item {
-        padding: 0;
-        border-bottom: none;
+        //   padding: 0;
+        //   border-bottom: none;
     }
     .text {
         position: relative;
@@ -1058,16 +1058,16 @@ button {
                 color: $colorLink;
             }
         }
-    }
-    .btn-def {
-        position: absolute;
-        right: 5px;
-        top: 5px;
-        bottom: 5px;
-        width: 180px;
-        opacity: 0;
-        visibility: hidden;
-        transition: all .3s ease;
+        .btn-def {
+            position: absolute;
+            right: 5px;
+            top: 5px;
+            bottom: 5px;
+            width: 180px;
+            opacity: 0;
+            visibility: hidden;
+            transition: all .3s ease;
+        }
     }
 }
 
@@ -1188,5 +1188,91 @@ button {
                 opacity: 1;
             }
         }
+    }
+}
+
+.person-rev {}
+
+#comments {
+    padding-left: 0;
+    >li:first-child {
+        margin-top: 0;
+    }
+}
+
+.comments {
+    margin-bottom: 30px;
+    .ticket-avatar {
+        display: none;
+    }
+    .ticket-comment-author {
+        margin-left: 0;
+        font-weight: bold;
+        text-transform: uppercase;
+        color: #126f9b !important;
+    }
+    .ticket-comment-rating {
+        display: none;
+    }
+    .ticket-comment-text {
+        font-size: 13px;
+    }
+    .ticket-comment-createdon {
+        font-size: 11px;
+    }
+    .ticket-comment-link {
+        display: none;
+    }
+    .comment-reply {
+        text-align: right;
+        font-size: 14px;
+        font-family: $fontOSC;
+        font-weight: bold;
+        svg {
+            width: 11px;
+            height: 11px;
+            display: inline-block;
+            fill: #B2B2B2;
+            margin-right: 3px;
+        }
+        a {
+            display: inline-block;
+            color: #b4b4b4;
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+#comment-new-link {
+    display: block !important;
+    font-size: 11px;
+    text-transform: uppercase;
+    color: #676767;
+    font-weight: 600;
+    letter-spacing: 0;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #e2e2e2;
+    a {
+        color: #676767;
+    }
+}
+
+body {
+    .markItUp {
+        margin-top: -15px;
+    }
+    #comment-editor {
+        display: block;
+        width: 100%;
+        padding: 8px;
+    }
+}
+
+.modal-person {
+    max-width: 900px;
+    .ticket-comments {
+        display: none;
     }
 }

@@ -83,7 +83,7 @@ var os = g.getOs(),
 
         send: function (that) {
             var formData = new FormData($(that).get(0));
-            $(that).addClass('loder');
+            $(that).addClass('loader');
             var action = $(that).data('action');
             if (action) formData.append('action', action);
             formData.append('pagetitle', $('title').text());
@@ -201,6 +201,14 @@ var os = g.getOs(),
     function setSelect() {
         var id = $('.easy-autocomplete-container .selected .wr-res').data('id');
         console.log(id);
+        $.fancybox.open({
+            src  : 'ajax?action=person&id=' + id,
+            type : 'ajax',
+            opts : {
+                onComplete : function() {
+                }
+            }
+        });
     };
 
     var options = {
@@ -231,7 +239,7 @@ var os = g.getOs(),
             if (!data.query) {
                 //  return false;
             }
-            console.log();
+          //  console.log();
             return data;
         },
         list: {
@@ -259,7 +267,20 @@ var os = g.getOs(),
         var val = $(this).val();
         $('.type_res').hide();
         $('.js-' + val).show();
+    });
 
+
+    $(document).on('submit', '.seach-form', function(e){
+        e.preventDefault();
+        var $el = $('.page-content > .container'),
+            url = "?action=search&query="+ $('.seach-form input[name=query]').val();
+        $el.addClass('loader');
+        $.get( 'ajax'+url, function( data ) {
+           // console.log(data);
+            $el.html( data );
+            $el.removeClass('loader');
+            history.pushState(null, null, 'search'+url);
+        });
     });
 
 
