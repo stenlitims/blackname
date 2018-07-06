@@ -103,7 +103,7 @@ var os = g.getOs(),
                         $(that).find('input[type=text], input[type=email]').val('');
                         $(that).find('textarea').val('');
                     }
-                    $(that).removeClass('loder');
+                    $(that).removeClass('loader');
                     var time = 5000;
                     if (data.url) time = 3000;
 
